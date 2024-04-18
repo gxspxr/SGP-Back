@@ -1,23 +1,15 @@
 import mongoose, { Schema } from 'mongoose';
-import { IPeople } from '../../types/IPeople';
+import { IClient } from '../../types/IClient';
 
-const peopleSchema: Schema = new Schema<IPeople>({
-	_id: { type: String, required: true },
+const clientSchema: Schema = new Schema<IClient>({
 	name: { type: String, required: true },
-	height: { type: String },
-	mass: { type: String },
-	hair_color: { type: String },
-	skin_color: { type: String },
-	eye_color: { type: String },
-	birth_year: { type: String },
-	gender: { type: String },
-	homeworld: { type: String },
-	films: [{ type: String }],
-	starships: [{ type: String }],
-	created: { type: Date, default: Date.now },
-	edited: { type: Date, default: Date.now }
+	projectName: { type: String, required: true },
+	status: { type: String, required: true },
+	cost: { type: Number, required: true },
+	paymentType: { type: String, required: true },
+	nextPayment: { type: String, required: true }
 });
 
-const People = mongoose.model<IPeople>('People', peopleSchema);
+const Client = mongoose.model<IClient>('Client', clientSchema);
 
-export default People;
+export default Client;

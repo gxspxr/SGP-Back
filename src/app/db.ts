@@ -3,7 +3,7 @@ async function connectDB() {
 	const db = mongoose.connection;
 
 	try {
-		mongoose.connect('mongodb+srv://sernagas1234:rBjHc0hFYcwfdQlI@cluster0.4sz8s5p.mongodb.net/');
+		mongoose.connect('mongodb+srv://gassern1602:NtSOPiz9U3MpSgqa@cluster0.owdhaiy.mongodb.net/');
 		db.once('open', () => {
 			console.log('🟢 Database successfully connected 🚀');
 		});
